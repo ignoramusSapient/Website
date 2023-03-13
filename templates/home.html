@@ -13,19 +13,20 @@
       </style>
   </head>
  <body>
+   {%include 'nav.html'%}
    <div class="container">
      <h1 class='text-center mt-4 mb-4'>Poem's World</h1>
    <img src='https://poetry-website.ignoramussapien.repl.co/static/image_hp.jpg' class="rounded mx-auto d-block" height=500>
-<h2 class='mt-5 mb-4'>List of Poems</h2>
+<h2 class='text-center mt-5 mb-4'>List of Poems</h2>
    <div>
     {% for poem in poems %}
       {%include 'poemslist.html' %}
     {% endfor %} 
 </div> 
      <div class='text-center'>
-     <button class="btn btn-outline-primary">About Us</button>
-       <p class='mt-4 mb-3'>Copyright 2023,SKP</p>
+        {% include 'connectwithus.html'%}
        </div>
+     {% include 'footer.html' %}
    </div>
  </body>   
 </html>
