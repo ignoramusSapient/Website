@@ -1,0 +1,24 @@
+<h3 class='text-left mt-5 mb-3'> Feedback Form</h3>
+<form action='/poems/{{poem['id']}}/submit' method='post'>
+  <div>
+    <label><b>Full Name</b></label><br>
+    <input type='text' name='full name' placeholder='John Doe'><br>
+    <br>
+    <label><b>Email ID</b></label><br>
+    <input type='email' name='email' placeholder='john@doe.com'><br>
+    <br>
+   
+    <div class='col-5'>
+      <p><label><b>Ratings: </b></label><br></p>
+      <p><input type="radio" name="ratings" value="Okayish"> Okay</p>
+      <p><input type="radio" name="ratings" value="Good"> Good</p>
+      <p><input type="radio" name="ratings" value="Amazing"> Amazing</p>
+    </div>  
+  <div>
+    <label><b>Additional Comments</b></label><br>
+    <textarea maxlength='200' name='comments' placeholder='What i liked about......' rows='6' cols='50'>Whenever i read these poems......</textarea>
+    <br>
+  </div>
+  </div>  
+  <input type='submit'><br>
+</form>
