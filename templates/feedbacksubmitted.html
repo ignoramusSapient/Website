@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Feedback Submitted
+    </title>
+    <body>
+      {% include 'bootstrap.html' %}
+      {% include 'nav.html' %}
+      
+      <h4>Full Name</h4>
+      <div>{{feedback['full_name']}}</div>
+
+      <h4>Email ID</h4>
+      <div>{{feedback['email']}}</div>
+      
+      
+      <h4>Comments</h4>
+      <div>{{feedback['comments']}}</div>
+    </body>  
+  </head>
+</html>
