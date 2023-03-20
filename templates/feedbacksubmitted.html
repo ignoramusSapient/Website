@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>
-      Feedback Submitted
-    </title>
-    <body>
-      {% include 'bootstrap.html' %}
+    {% include 'bootstrap.html' %}
+    <title>Feedback Submitted - Poem's World</title>
+    </head>
+    <body> 
+      <div class="container">
       {% include 'nav.html' %}
-      
+      {% include 'feedbackimage.html' %}
       <h4>Full Name</h4>
       <div>{{feedback['full_name']}}</div>
 
@@ -17,6 +17,11 @@
       
       <h4>Comments</h4>
       <div>{{feedback['comments']}}</div>
+      <div class='col-6'>
+          <a href='/' class="btn btn-outline-secondary" type='button'>Go to Home</a>
+        </div>
+      </div>  
     </body>  
-  </head>
+    {% include 'footer.html' %} 
+  
 </html>

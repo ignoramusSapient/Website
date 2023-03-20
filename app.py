@@ -28,14 +28,17 @@ def poems_json(id):
   poem = poem_db(id)
   return jsonify(poem)
 
+@app.route('/api/poems/<id>/submit')
+def feedback_json(id):
+  feed=add_feedback_to_db(id, data)
+  return jsonify(data)
+
 @app.route('/poems/<id>/submit', methods=['post'])
 def feedback_to_poem(id):
   data = request.form
-  poem = poem_db(id)
   add_feedback_to_db(id, data)
   return render_template('feedbacksubmitted.html', 
                          feedback=data)
-  
   
 if __name__ == "__main__":
   app.run(host='0.0.0.0', debug=True)

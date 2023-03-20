@@ -29,12 +29,12 @@ def poem_db(id):
     else:
       return rows[0]._asdict()
 
-def add_feedback_to_db(poem_id, data):
+def add_feedback_to_db(id, feed):
   with engine.connect() as conn:
-    query = text(f"INSERT INTO feedback_formq   (poem_id, full_name, email, comments) VALUES (:poem_id, :full_name, :email, :comments)")
+    query = text("INSERT INTO feedback (id, full_name, email, comments) VALUES (:id, :full_name, :email, :comments);")
 
     conn.execute(query, 
-                poem_id=poem_id,
-                full_name=data['full_name'],
-                email=data['email'],
-                comments=data['comments'])
+                {'id':id,
+                'full_name':feed['full_name'],
+                'email':feed['email'],
+                'comments':feed['comments']})
