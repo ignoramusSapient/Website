@@ -8,20 +8,18 @@
       <div class="container">
       {% include 'nav.html' %}
       {% include 'feedbackimage.html' %}
-      <h4>Full Name</h4>
-      <div>{{feedback['full_name']}}</div>
+      
+      <h4 class='text-center'>Full Name</h4>
+      <div class='text-center'>{{feedback['full_name']}}</div>
 
-      <h4>Email ID</h4>
-      <div>{{feedback['email']}}</div>
+      <h4 class='text-center'>Email ID</h4>
+      <div class='text-center'>{{feedback['email']}}</div>
       
+      <h4 class='text-center'>Comments</h4>
+      <div class='text-center'>{{feedback['comments']}}</div>
       
-      <h4>Comments</h4>
-      <div>{{feedback['comments']}}</div>
-      <div class='col-6'>
-          <a href='/' class="btn btn-outline-secondary" type='button'>Go to Home</a>
-        </div>
+    <p class='text-center'>  <a href='/' class="text-center btn btn-outline-secondary" type='button'>Go to Home</a></p>
+       {% include 'footer.html' %}       
       </div>  
     </body>  
-    {% include 'footer.html' %} 
-  
-</html>
+  </html>
